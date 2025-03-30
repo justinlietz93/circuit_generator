@@ -1,0 +1,21 @@
+ 
+  // --- tsconfig.json ---
+  // TypeScript compiler options.
+  {
+    "compilerOptions": {
+      "target": "ES2016", // Or newer target
+      "module": "CommonJS",
+      "outDir": "./dist", // Output directory for compiled JS
+      "rootDir": "./src", // Source directory for TS files
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "resolveJsonModule": true // Allows importing JSON files
+    },
+    "include": ["src/**/*"], // Which files to include
+    "exclude": ["node_modules"] // Which files to exclude
+  }
+  
+  
+ 

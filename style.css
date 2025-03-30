@@ -1,0 +1,119 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+h2 {
+    color: #555;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px;
+    width: 95%;
+    max-width: 1400px; /* Limit max width */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.input-section, .output-section {
+    flex: 1; /* Each section takes equal space */
+    min-width: 400px; /* Minimum width before wrapping */
+    display: flex;
+    flex-direction: column;
+}
+
+.output-section {
+   display: flex;
+   flex-direction: row; /* Code and diagram side-by-side */
+   gap: 15px;
+}
+
+.code-output, .diagram-output {
+    flex: 1; /* Share space within the output section */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: auto; /* Add scrollbars if content overflows */
+}
+
+
+textarea {
+    width: 95%; /* Take most of the width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-family: monospace;
+    min-height: 100px; /* Ensure decent height */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    align-self: flex-start; /* Align button to the start */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+pre {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 4px;
+    white-space: pre-wrap; /* Wrap long lines */
+    word-wrap: break-word;
+    max-height: 400px; /* Limit height and allow scroll */
+    overflow-y: auto;
+}
+
+code {
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+#diagramContainer {
+    border: 1px dashed #ccc;
+    min-height: 200px; /* Minimum height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Allow scrolling/panning if diagram is large */
+    max-height: 500px; /* Limit height */
+}
+
+#diagramContainer svg {
+    max-width: 100%; /* Ensure SVG scales down */
+    max-height: 100%;
+}
+
+#loadingIndicator, #errorIndicator {
+    margin-top: 10px;
+    font-style: italic;
+}
+

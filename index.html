@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Electrical Diagram Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Electrical Diagram Generator</h1>
+    <div class="container">
+        <div class="input-section">
+            <h2>1. Enter Requirements / Components</h2>
+            <textarea id="requirementsInput" rows="10" placeholder="e.g., Connect an LED and resistor to Arduino pin D13 and GND. Use MFRC522 RFID reader with Arduino Uno."></textarea>
+            <button id="generateButton">Generate Diagram</button>
+        </div>
+
+        <div class="output-section">
+            <div class="code-output">
+                <h2>2. Generated Diagram Code (Graphviz DOT)</h2>
+                <pre><code id="dotCodeOutput">// Diagram code will appear here...</code></pre>
+            </div>
+            <div class="diagram-output">
+                <h2>3. Rendered Diagram</h2>
+                <div id="diagramContainer">
+                    <p>Click "Generate Diagram" to see the result.</p>
+                </div>
+                 <div id="loadingIndicator" style="display: none;">Rendering diagram...</div>
+                 <div id="errorIndicator" style="display: none; color: red;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./dist/renderer.js"></script>
+</body>
+</html>
